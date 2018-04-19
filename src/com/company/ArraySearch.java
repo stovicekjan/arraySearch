@@ -2,10 +2,7 @@ package com.company;
 
 import java.util.ArrayList;
 
-/**
- * Created by Jan on 19. 4. 2018.
- */
-public class ArraySearch {
+class ArraySearch {
 
     /**
      * The function searches for an Integer in an ArrayList al by binary algorithm with the time complexity
@@ -14,7 +11,7 @@ public class ArraySearch {
      * @param num - the Integer to be searched
      * @return the index of the found element, or -1 if the element is not present
      */
-    public static int binarySearch(ArrayList<Integer> al, Integer num) {
+    static int binarySearch(ArrayList<Integer> al, Integer num) {
         int left = 0;
         int right = al.size() - 1;
         int index;
@@ -41,7 +38,7 @@ public class ArraySearch {
 
             if (right - left == 1 && num.equals(al.get(right)))
                 return right;
-        } while (num != al.get(index));
+        } while (num.equals(al.get(index)));
 
         return index;
     }

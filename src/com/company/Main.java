@@ -5,9 +5,9 @@ import java.util.Collections;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Main {
-    public static final int MIN = 1;                    // minimum values for integers in the array
-    public static final int MAX = 10;                   // maximum values for integers in the array
-    public static final int ELEMENTS_NUMBER = 8;        // number of elements in the array
+    private static final int MIN = 1;                    // minimum values for integers in the array
+    private static final int MAX = 10;                   // maximum values for integers in the array
+    private static final int ELEMENTS_NUMBER = 8;        // number of elements in the array
 
     public static void main(String[] args) {
         ArrayList<Integer> arr = new ArrayList<>();
@@ -30,13 +30,13 @@ public class Main {
 
         Integer[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}; // numbers to be searched
 
-        for (int i = 0; i < numbers.length; ++i) {
-            int idx = ArraySearch.binarySearch(arr, numbers[i]);
+        for (Integer number : numbers) {
+            int idx = ArraySearch.binarySearch(arr, number);
 
             if (idx == -1)
-                System.out.println("The number " + numbers[i] + " was not found.");
+                System.out.println("The number " + number + " was not found.");
             else
-                System.out.println("The number " + numbers[i] + " was found on position " + idx + ".");
+                System.out.println("The number " + number + " was found on position " + idx + ".");
         }
     }
 }
